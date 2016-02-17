@@ -1,0 +1,10 @@
+*.pyc
+Media/
+db.sqlite3
+/socolapp/db.sqlite3
+*~
+migrations/
+/socolapp/college/migrations/*
+
+
+
