@@ -5,6 +5,9 @@ from django.contrib.auth.models import User
 from django.contrib import admin
 from django.db import IntegrityError
 
+def loginMaster(request):
+    return render_to_response('html_template/login/loginIndex.html')
+
 def user_login(request):
     print request.body
     data_dict = json.loads(request.body)
@@ -27,5 +30,9 @@ def user_login(request):
     else:
         return HttpResponse(json.dumps({"validation":"Invalid Login Credentials","status":False}), content_type="application/json")
 
-def loginMaster(request):
-    return render_to_response('html_template/login/loginIndex.html')
+
+def signIn(request):
+    return render_to_response('html_template/login/signIn.html')
+
+def signUp(request):
+    return render_to_response('html_template/login/signUp.html')

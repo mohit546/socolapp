@@ -5,8 +5,8 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>SoColApp</title>
+		{% load staticfiles %}
 		<link rel="stylesheet" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
-		<link rel="author" href="humans.txt">
 		<style>
 			.loginForm {
 				border: 1px solid #aaa;
@@ -17,13 +17,15 @@
 	<body ng-app="socolappLogin" ng-controller="loginController">
 
 
-		<script src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
 
+		<script src="{% static 'bower_components/jquery/jquery.min.js' %}"></script>
 		<script src="{% static 'bower_components/angular/angular.min.js' %}"></script>
 		<script src="{% static 'bower_components/angular-ui-router/release/angular-ui-router.min.js' %}"></script>
 		<script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
 		<script src="{% static 'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js' %}"></script>
 
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel blanditiis optio sit eveniet odit accusamus iste quis? Possimus, ratione incidunt, quia perferendis temporibus veritatis tempore eos? Adipisci, eveniet animi non!</p>
+		<div ui-view></div>
 
 		<script src="{% static 'login/loginApp.js' %}"></script>
 	</body>

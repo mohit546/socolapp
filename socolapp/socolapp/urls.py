@@ -18,11 +18,15 @@ from django.contrib import admin
 from .views import(
 	user_login,
     loginMaster,
+    signIn,
+    signUp,
 	)
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^user_login/', user_login),
-    url(r'^', loginMaster),
+    url(r'^$', loginMaster),
+    url(r'^signIn/', signIn),
+    url(r'^signUp/', signUp),
 
 ]

@@ -1,11 +1,12 @@
-angular.module('socolappLogin', ['ui.router', 'ui.bootstrap'])
+var socolappLogin = angular.module('socolappLogin', ['ui.router'])
 .config(function($stateProvider, $urlRouterProvider){
 
-	$stateProvider
+	// $urlRouterProvider.otherwise('/signIn');
 
+	$stateProvider
 	.state('home', {
-		url: '/home'
-	});
+		url: '/'
+	})
 	.state('signIn', {
 		url: '/signIn',
 		templateUrl: '/signIn',
@@ -16,17 +17,22 @@ angular.module('socolappLogin', ['ui.router', 'ui.bootstrap'])
 		templateUrl: '/signUp',
 		controller: 'signUpController'
 	});
-})
+});
 
-.controller('loginController', function($scope){
+socolappLogin.controller('loginController', function($scope, $state, $timeout){
 	console.log('loginController is loaded');
 
-})
-.controller('signInController', function($scope){
-	console.log('loginController is loaded');
+	$scope.init = function(){
+	};
+	$timeout($scope.init);
+});
 
-})
-.controller('signUpController', function($scope){
-	console.log('loginController is loaded');
+socolappLogin.controller('signInController', function($scope){
+	console.log('signInController is loaded');
+
+});
+
+socolappLogin.controller('signUpController', function($scope){
+	console.log('signUpController is loaded');
 
 });
