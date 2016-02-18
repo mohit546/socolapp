@@ -1,0 +1,19 @@
+{
+  "name": "static",
+  "homepage": "https://github.com/ram546/socolapp",
+  "authors": [
+    "Mohit Patil <mohitpatil546@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
