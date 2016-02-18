@@ -5,7 +5,7 @@ angular.module('socolappLogin', ['ui.router', 'ui.bootstrap'])
 
 	.state('home', {
 		url: '/home'
-	})
+	});
 	.state('signIn', {
 		url: '/signIn',
 		templateUrl: '/signIn',

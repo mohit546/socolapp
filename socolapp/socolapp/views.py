@@ -26,3 +26,6 @@ def user_login(request):
             return HttpResponse(json.dumps({"validation":"Invalid Login","status":False}), content_type="application/json")
     else:
         return HttpResponse(json.dumps({"validation":"Invalid Login Credentials","status":False}), content_type="application/json")
+
+def loginMaster(request):
+    return render_to_response('html_template/login/loginIndex.html')
