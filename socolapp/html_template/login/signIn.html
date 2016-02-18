@@ -1,13 +1,13 @@
 {% verbatim %}
 <div class="row">
 	<div class="col-xs-4 col-xs-offset-8">
-		<div class="loginForm">
+		<form class="loginForm" name="signInForm" ng-submit="signIn(signInForm.$valid)" novalidate>
 			<!-- <label for="">User Name</label> -->
 			<input type="text" class="form-control customInput" placeholder="User Name" autofocus>
 			<!-- <label for="">Password</label> -->
 			<input type="password" class="form-control customInput" placeholder="Password">
 			<button class="btn btn-success form-control">Login</button>
-		</div>
+		</form>
 	</div>
 </div>
 

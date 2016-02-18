@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-xs-4 col-xs-offset-8">
-		<div class="loginForm">
+		<form class="loginForm" name="signUpForm" ng-submit="signUp(signUpForm.$valid)" novalidate>
 			<!-- <label for="">User Name*</label> -->
 			<input type="text" class="form-control customInput" placeholder="User Name*" autofocus>
 			<!-- <label for="">Email</label> -->
@@ -11,6 +11,6 @@
 			<input type="Password" class="form-control customInput" placeholder="Confirm Password*">
 
 			<button class="btn btn-success form-control">SignUp</button>
-		</div>
+		</form>
 	</div>
 </div>
