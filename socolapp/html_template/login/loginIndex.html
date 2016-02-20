@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
 		<style>
 			body {
-					background: url(static/img/bg.jpg) no-repeat center center fixed;
+					background: url(static/img/blurbg.jpg) no-repeat center center fixed;
 					-webkit-background-size: cover;
 					-moz-background-size: cover;
 					-o-background-size: cover;
@@ -20,6 +20,23 @@
 					-ms-filter: blur(0px);
 					filter: blur(0px);
 				}
+			#overlay {
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+
+				background:black;
+				background:rgba(0,0,0,0.8);
+
+				filter:blur(4px);
+				-o-filter:blur(4px);
+				-ms-filter:blur(4px);
+				-moz-filter:blur(4px);
+				-webkit-filter:blur(4px);
+			}
+
 			.loginForm {
 				border: 1px solid rgba(0,0,0,0.2);
 				border-radius: 10px;
@@ -35,7 +52,7 @@
 		</style>
 	</head>
 	<body ng-app="socolappLogin" ng-controller="loginController">
-
+		<div class="overlay">
 		<nav class="navbar navbar-default" role="navigation" style="margin-bottom: 100px;">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -79,5 +96,7 @@
 		</div>
 
 		<script src="{% static 'login/loginApp.js' %}"></script>
+
+		</div>
 	</body>
 </html>
